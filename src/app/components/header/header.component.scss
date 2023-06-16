@@ -1,0 +1,17 @@
+.center {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  & .nav-link {
+    padding: 10px;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.active {
+  font-size: 18px;
+  color: blueviolet;
+}

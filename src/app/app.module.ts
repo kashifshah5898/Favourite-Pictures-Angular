@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { PhotostreamComponent } from './components/photostream/photostream.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, FavoritesComponent, PhotostreamComponent],
+  declarations: [AppComponent, FavoritesComponent, PhotostreamComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
