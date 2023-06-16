@@ -12,3 +12,15 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.image {
+  border-radius: 12px;
+}
+
+.image:hover {
+  opacity: 0.75;
+}
+
+.image:active {
+  opacity: 0.9;
+}

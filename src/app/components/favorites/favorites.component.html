@@ -3,5 +3,9 @@
   class="mt-4 pointer"
   *ngFor="let photo of favouritePhotos"
 >
-  <img class="photo" src="{{ photo.download_url }}" alt="{{ photo.id }}" />
+  <img
+    class="photo image"
+    src="{{ photo.download_url }}"
+    alt="{{ photo.id }}"
+  />
 </div>

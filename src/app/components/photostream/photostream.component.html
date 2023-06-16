@@ -4,7 +4,11 @@
     (click)="addToFavorites(photo)"
     *ngFor="let photo of photos"
   >
-    <img class="photo" src="{{ photo.download_url }}" alt="{{ photo.id }}" />
+    <img
+      class="photo image"
+      src="{{ photo.download_url }}"
+      alt="{{ photo.id }}"
+    />
   </div>
 </div>
 <div class="loader" *ngIf="loading">
