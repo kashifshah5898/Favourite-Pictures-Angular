@@ -52,11 +52,20 @@ export class PhotostreamComponent implements OnInit {
     let getFavorites = localStorage.getItem('favorites');
     if (getFavorites) {
       let parseData = JSON.parse(getFavorites);
-      localStorage.setItem('favorites', JSON.stringify([...parseData, data]));
+
+      let findAlready = parseData.filter((favorite: any) => {
+        return favorite.id === data.id;
+      });
+
+      if (findAlready.length) {
+        this.toast.warning('Picture Already Exists To Favorites');
+      } else {
+        localStorage.setItem('favorites', JSON.stringify([...parseData, data]));
+        this.toast.success('Picture Added To Favorites');
+      }
     } else {
       localStorage.setItem('favorites', JSON.stringify([data]));
+      this.toast.success('Picture Added To Favorites');
     }
-
-    this.toast.success('Picture Added To Favorites');
   }
 }
