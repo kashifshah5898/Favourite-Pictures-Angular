@@ -7,6 +7,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { PhotostreamComponent } from './components/photostream/photostream.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PhotoComponent } from './components/photo/photo.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     FavoritesComponent,
     PhotostreamComponent,
     HeaderComponent,
+    PhotoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

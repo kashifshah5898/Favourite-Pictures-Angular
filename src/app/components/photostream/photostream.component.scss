@@ -14,10 +14,6 @@
     &:nth-child(3n) {
       margin-right: 0; // Remove margin for the last photo in each row
     }
-
-    .image {
-      border: 5px solid red;
-    }
   }
 
   .loader {

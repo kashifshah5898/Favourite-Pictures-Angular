@@ -1,0 +1,17 @@
+.photo {
+  display: flex;
+  justify-content: center;
+  .w-30 {
+    width: 30%;
+  }
+  .mt-4 {
+    margin-top: 4%;
+  }
+  .btn-photo {
+    color: white;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

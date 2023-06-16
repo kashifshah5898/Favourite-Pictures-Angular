@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class PhotostreamComponent implements OnInit {
   photos: any[] = [];
   loading: boolean = false;
+  page: number = 0;
 
   constructor(private http: HttpClient) {}
 
@@ -33,8 +34,9 @@ export class PhotostreamComponent implements OnInit {
     const delay = Math.floor(Math.random() * 100) + 200; // Random delay between 200-300ms
 
     setTimeout(() => {
+      this.page++;
       this.http
-        .get('https://picsum.photos/v2/list?page=2&limit=10')
+        .get(`https://picsum.photos/v2/list?page=${this.page}&limit=10`)
         .subscribe((data: any) => {
           this.photos.push(...data);
           this.loading = false;
@@ -50,5 +52,7 @@ export class PhotostreamComponent implements OnInit {
     } else {
       localStorage.setItem('favorites', JSON.stringify([data]));
     }
+
+    alert('Picture added to favorites');
   }
 }
