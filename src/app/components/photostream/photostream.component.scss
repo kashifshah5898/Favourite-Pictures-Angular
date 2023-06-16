@@ -3,7 +3,8 @@
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 25px;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 
@@ -22,7 +23,7 @@
   .photo {
     flex: 0 0 calc(100% - 20px); // Updated for mobile view
     height: 300px;
-    width: 95%;
+    width: 99%;
     background-color: #f2f2f2;
     margin-bottom: 10px;
     margin-right: 20px;
@@ -38,7 +39,7 @@
 
   @media (max-width: 768px) {
     .imageWidth {
-      width: 98%;
+      width: 100%;
     }
   }
 }

@@ -1,14 +1,20 @@
-<div class="photo">
-  <img class="w-70 image" src="{{ photo.download_url }}" alt="{{ photo.id }}" />
-  <br />
-</div>
-<div class="photo">
-  <button
-    class="mt-4"
-    mat-raised-button
-    (click)="removeFromFavorite()"
-    color="warn"
-  >
-    Remove From Favorite
-  </button>
+<div class="container">
+  <div class="photo">
+    <img
+      class="w-70 image"
+      src="{{ photo.download_url }}"
+      alt="{{ photo.id }}"
+    />
+    <br />
+  </div>
+  <div class="photo">
+    <button
+      class="mt-4"
+      mat-raised-button
+      (click)="removeFromFavorite()"
+      color="warn"
+    >
+      Remove From Favorite
+    </button>
+  </div>
 </div>
