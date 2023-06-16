@@ -1,17 +1,18 @@
 .center {
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: #002c5a;
   & .nav-link {
     padding: 10px;
   }
 }
 
 .nav-link {
+  color: #fff;
   text-decoration: none;
 }
 
 .active {
-  font-size: 18px;
-  color: blueviolet;
+  font-size: 20px;
+  color: #80df39;
 }
