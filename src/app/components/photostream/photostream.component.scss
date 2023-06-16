@@ -20,19 +20,26 @@
   }
 
   .photo {
-    flex: 0 0 calc(33.33% - 20px); // Adjust the width to fit three photos in a row
+    flex: 0 0 calc(100% - 20px); // Updated for mobile view
     height: 300px;
     width: 95%;
     background-color: #f2f2f2;
     margin-bottom: 10px;
-    margin-right: 20px; // Add margin between photos
+    margin-right: 20px;
+
     &:nth-child(3n) {
-      margin-right: 0; // Remove margin for the last photo in each row
+      margin-right: 0;
     }
   }
 
   .imageWidth {
     width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    .imageWidth {
+      width: 98%;
+    }
   }
 }
 
