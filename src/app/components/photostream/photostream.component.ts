@@ -26,6 +26,11 @@ export class PhotostreamComponent implements OnInit {
     if (scrollHeight - scrollTop === clientHeight) {
       this.loadPhotos();
     }
+    console.log(
+      `scrollHeight: ${scrollHeight} , scrollTop: ${scrollTop}, clientHeight: ${clientHeight} and condition: ${
+        scrollHeight - scrollTop === clientHeight
+      }`
+    );
   }
 
   loadPhotos() {
@@ -50,5 +55,6 @@ export class PhotostreamComponent implements OnInit {
     } else {
       localStorage.setItem('favorites', JSON.stringify([data]));
     }
+    alert('Picture added to Favourites');
   }
 }
