@@ -1,9 +1,26 @@
 .photo-container {
-  height: 400px;
+  height: 85vh;
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
+  /* Hide scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  /* WebKit (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 
   .photo {
     flex: 0 0 calc(33.33% - 20px); // Adjust the width to fit three photos in a row

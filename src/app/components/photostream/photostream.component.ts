@@ -24,14 +24,12 @@ export class PhotostreamComponent implements OnInit {
     const scrollTop = container.scrollTop;
     const clientHeight = container.clientHeight;
 
-    if (scrollHeight - scrollTop === clientHeight) {
+    if (
+      scrollHeight - Math.floor(scrollTop) === clientHeight ||
+      scrollHeight - Math.ceil(scrollTop) === clientHeight
+    ) {
       this.loadPhotos();
     }
-    console.log(
-      `scrollHeight: ${scrollHeight} , scrollTop: ${scrollTop}, clientHeight: ${clientHeight} and condition: ${
-        scrollHeight - scrollTop === clientHeight
-      }`
-    );
   }
 
   loadPhotos() {
