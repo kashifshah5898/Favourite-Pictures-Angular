@@ -4,12 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-  /* Hide scrollbar */
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 
-  /* WebKit (Chrome, Safari) */
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -37,13 +34,10 @@
   .imageWidth {
     width: 30%;
   }
+}
 
-  .loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    font-size: 18px;
-    color: #777;
-  }
+.loader {
+  position: absolute;
+  top: 75%;
+  left: 43%;
 }
