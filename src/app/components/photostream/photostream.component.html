@@ -1,1 +1,12 @@
-<p>photostream works!</p>
+<div class="photo-container" (scroll)="onScroll()">
+  <div
+    class="pointer"
+    (click)="addToFavorites(photo)"
+    *ngFor="let photo of photos"
+  >
+    <img class="photo" src="{{ photo.download_url }}" alt="{{ photo.id }}" />
+  </div>
+  <div class="loader" *ngIf="loading">
+    <i class="fa fa-spinner fa-spin"></i> Loading...
+  </div>
+</div>

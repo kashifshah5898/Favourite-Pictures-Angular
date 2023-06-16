@@ -1,0 +1,31 @@
+.photo-container {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .photo {
+    flex: 0 0 calc(33.33% - 20px); // Adjust the width to fit three photos in a row
+    height: 300px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+    margin-right: 20px; // Add margin between photos
+    &:nth-child(3n) {
+      margin-right: 0; // Remove margin for the last photo in each row
+    }
+
+    .image {
+      border: 5px solid red;
+    }
+  }
+
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 18px;
+    color: #777;
+  }
+}
