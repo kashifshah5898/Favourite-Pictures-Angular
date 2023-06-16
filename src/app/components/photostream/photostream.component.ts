@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-photostream',
@@ -11,7 +12,7 @@ export class PhotostreamComponent implements OnInit {
   loading: boolean = false;
   page: number = 0;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private toast: AlertService) {}
 
   ngOnInit() {
     this.loadPhotos();
@@ -56,6 +57,6 @@ export class PhotostreamComponent implements OnInit {
       localStorage.setItem('favorites', JSON.stringify([data]));
     }
 
-    alert('Picture added to favorites');
+    this.toast.success('Picture Added To Favorites');
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { PhotoComponent } from './components/photo/photo.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { AlertModule } from 'ngx-alerts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    AlertModule.forRoot({ maxMessages: 5, timeout: 5000 }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

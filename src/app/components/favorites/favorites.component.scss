@@ -1,6 +1,9 @@
 .mt-4 {
   margin-top: 4%;
 
+  display: flex;
+  justify-content: center;
+
   .photo {
     flex: 0 0 calc(33.33% - 20px); // Adjust the width to fit three photos in a row
     height: 300px;

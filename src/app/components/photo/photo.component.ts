@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-photo',
@@ -9,7 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PhotoComponent {
   favoritePhotos: any = localStorage.getItem('favorites');
   photo: any;
-  constructor(private route: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private route: Router,
+    private activatedRoute: ActivatedRoute,
+    private toast: AlertService
+  ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: any) => {
@@ -27,6 +32,6 @@ export class PhotoComponent {
     );
     localStorage.setItem('favorites', JSON.stringify(newFavt));
     this.route.navigateByUrl('/Favorites');
-    alert('Picture is removed from favorites');
+    this.toast.danger('Picture Is Removed From Favorites');
   }
 }
