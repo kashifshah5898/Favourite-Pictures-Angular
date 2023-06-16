@@ -42,6 +42,25 @@ export class PhotostreamComponent implements OnInit {
       this.http
         .get(`https://picsum.photos/v2/list?page=${this.page}&limit=10`)
         .subscribe((data: any) => {
+          let getFavorites: any = localStorage.getItem('favorites');
+          let parseData: any;
+          if (getFavorites) {
+            parseData = JSON.parse(getFavorites);
+          } else {
+            parseData = [];
+          }
+
+          // Iterate over the first array
+          data.forEach((obj: any) => {
+            // Check if the object exists in the second array
+            const foundObject = parseData.find(
+              (item: any) => item.id === obj.id
+            );
+
+            // Set the 'isliked' value
+            obj.isLiked = foundObject !== undefined;
+          });
+
           this.photos.push(...data);
           this.loading = false;
         });
@@ -50,6 +69,7 @@ export class PhotostreamComponent implements OnInit {
 
   addToFavorites(data: any) {
     let getFavorites = localStorage.getItem('favorites');
+    data.isLiked = true;
     if (getFavorites) {
       let parseData = JSON.parse(getFavorites);
 

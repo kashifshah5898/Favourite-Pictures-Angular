@@ -35,6 +35,25 @@
 
   .imageWidth {
     width: 30%;
+
+    .heart-icon {
+      display: flex;
+      justify-content: end;
+      margin-right: 3%;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .icon-position {
+      position: relative;
+      top: 100%;
+    }
   }
 
   @media (max-width: 768px) {

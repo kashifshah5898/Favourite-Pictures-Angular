@@ -13,6 +13,8 @@ import { PhotoComponent } from './components/photo/photo.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AlertModule } from 'ngx-alerts';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { AlertModule } from 'ngx-alerts';
     MatProgressSpinnerModule,
     AlertModule.forRoot({ maxMessages: 5, timeout: 5000 }),
     BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

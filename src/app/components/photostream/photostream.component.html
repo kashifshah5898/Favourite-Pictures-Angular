@@ -4,6 +4,17 @@
     (click)="addToFavorites(photo)"
     *ngFor="let photo of photos"
   >
+    <div class="heart-icon">
+      <div *ngIf="photo.isLiked; else elseBlock">
+        <mat-icon class="red icon-position">favorite</mat-icon>
+      </div>
+      <ng-template #elseBlock>
+        <div>
+          <mat-icon class="green icon-position">favorite_border</mat-icon>
+        </div>
+      </ng-template>
+    </div>
+
     <img
       class="photo image"
       src="{{ photo.download_url }}"
