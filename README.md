@@ -2,13 +2,42 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
-## Development server
+# Angular Infinite Picture Viewer
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is an Angular application that allows users to view an infinite number of pictures and add them to their favorites list. Users can also remove pictures from their favorites list.
 
-## Code scaffolding
+# Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run this project locally, follow the steps below:
+
+# Prerequisites
+
+Make sure you have the following installed on your machine:
+
+Node.js (version 12 or above)
+Angular CLI (version 12 or above)
+
+## Installation
+
+Clone this repository to your local machine or download the ZIP file and extract it.
+Open a terminal and navigate to the project directory.
+Run the following command to install the dependencies: `npm install` Once the dependencies are installed, start the development server by running the following command:`ng serve`
+
+Open your web browser and visit `http://localhost:4200/` to access the application.
+
+On the home page, you will see an infinite scroll of pictures loaded from the server.
+
+Scroll down to load more pictures dynamically. Click on a picture to add it to favorites.
+
+To remove a picture from your favorites, click the "Remove from Favorites" button displayed when clicking on a picture in the favorites section.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+
+This project was inspired by the need to showcase infinite scroll and favorite functionality in an Angular application.
 
 ## Build
 
